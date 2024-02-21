@@ -64,6 +64,16 @@
         p {
             color: #555;
         }
+
+        /* New style for the output boundary */
+        .output-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -77,8 +87,10 @@
     </form>
 
     {% if output %}
-        <h2>Generated Output:</h2>
-        <p>{{ output }}</p>
+        <div class="output-container">
+            <h2>Generated Output:</h2>
+            <p>{{ output }}</p>
+        </div>
     {% endif %}
 </body>
 </html>
